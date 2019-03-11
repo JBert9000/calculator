@@ -1,6 +1,12 @@
-from Tkinter import *
-import Tkinter
-import tkMessageBox
+# for python 2 and under
+# from Tkinter import *
+# import Tkinter
+# import tkMessageBox
+
+# for python 3+
+from tkinter import *
+import tkinter
+import tkinter.messagebox
 
 def processing():
     try:
@@ -27,7 +33,11 @@ def processing():
     except ValueError:
         tkMessageBox.showwarning("Warning", "Please enter value in intergers")
 
-top = Tkinter.Tk()
+# for python 2 and under
+# top = Tkinter.Tk()
+
+# for python 3 and over
+top = tkinter.Tk()
 L1 = Label(top, text="My Calculator").grid(row = 0, column = 1)
 L2 = Label(top, text="Number 1").grid(row = 1, column = 0)
 L3 = Label(top, text="Number 2").grid(row = 2, column = 0)
